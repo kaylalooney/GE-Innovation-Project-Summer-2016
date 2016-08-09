@@ -14,6 +14,9 @@ MASTER_DICT = {'a0  55  25  11': "white card", "04  f2  48  ea  79  4d  80": "li
 conn = sqlite3.connect('Pi_NFC.db') # if database does not yet exist, one will be created, otherwise the existing one will be used
 c = conn.cursor()
 
+# Create table
+#c.execute('''CREATE TABLE nfc (date text,name text,uid real,location text)''') # uncomment when you are running the program for the first time
+
 # setup light part
 import RPi.GPIO as GPIO
 blue_pin=36
